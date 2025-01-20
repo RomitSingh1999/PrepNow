@@ -1,20 +1,21 @@
 # Solid Principle 
 
 ## Defination
-    The SOLID principles are five design principles that help developers write better, maintainable, scalable, and robust object-oriented code. These principles aim to improve software design by reducing tight coupling and increasing modularity.
+The SOLID principles are five design principles that help developers write better, maintainable, scalable, and robust object-oriented code. These principles aim to improve software design by reducing tight coupling and increasing modularity.
 
 ### 1. Single Responsibility Principle (SRP)
 
-    Definition:
+Definition:
     A class should have only one reason to change, meaning it should have only one responsibility or job.
 
-    Why It's Important:
+Why It's Important:
 
-    Avoids mixing responsibilities, which can make the code hard to understand, test, and maintain.
-    Leads to smaller, more focused classes. 
+Avoids mixing responsibilities, which can make the code hard to understand, test, and maintain.
+Leads to smaller, more focused classes. 
 
-    Example:
-    `// Without SRP: A single class doing multiple things
+Example:
+
+    // Without SRP: A single class doing multiple things
     class Invoice {
     public void calculateTotal() { /* Calculate total logic */ }
     public void printInvoice() { /* Printing logic */ }
@@ -32,22 +33,21 @@
 
     class InvoiceRepository {
     public void saveToDatabase() { /* Save to DB logic */ }
-    }`
+    }
 
-    Use Case:
+Use Case:
     Separating business logic, presentation logic, and persistence logic in an e-commerce application.
 
 ### 2. Open/Closed Principle (OCP)
 
-    Definition:
+Definition:
     Software entities (classes, modules, functions) should be open for extension but closed for modification.
     
-    Why It's Important:
-
+Why It's Important:
     Avoids modifying existing code, which reduces the risk of introducing bugs.
     Encourages adding new features via extension.
 
-    Example:
+Example:
     
     // Without OCP: Modifying existing code for new functionality
     class PaymentProcessor {
@@ -87,15 +87,14 @@
     Adding support for new payment methods without altering existing payment processing code.
 ### 3. Liskov Substitution Principle (LSP)
 
-    Definition:
+Definition:
     Objects of a superclass should be replaceable with objects of a subclass without altering the correctness of the program.
     
-    Why It's Important:
-
+Why It's Important:
     Ensures that a subclass can be used wherever its parent class is expected.
     Prevents unintended behaviors caused by improper subclassing.
 
-    Example:
+Example:
     
     // Violating LSP: Subclass changes behavior unexpectedly
     class Bird {
@@ -128,22 +127,22 @@
     }
     }
     
-    Use Case:
+Use Case:
     Designing a hierarchy for vehicles where land and water vehicles behave appropriately without breaking assumptions.
+    
 ### 4. Interface Segregation Principle (ISP)
 
-    Definition:
+Definition:
     A class should not be forced to implement interfaces it does not use.
     
-    Why It's Important:
-    
+Why It's Important:    
         Avoids bloated interfaces.
         Leads to smaller, more focused interfaces.
     
-    Example:
+Example:
     
     // Violating ISP: A large interface
-    `interface Worker {
+    interface Worker {
     void work();
     void eat();
     }
@@ -181,22 +180,21 @@
         public void eat() {
             System.out.println("Human eating...");
         }
-    }`
+    }
     
     Use Case:
     Creating device drivers or APIs with specific operations (e.g., printers, scanners) without forcing unused methods.
 
 ### 5. Dependency Inversion Principle (DIP)
 
-    Definition:
+Definition:
     High-level modules should not depend on low-level modules. Both should depend on abstractions.
     
-    Why It's Important:
-
+Why It's Important:
     Reduces coupling between classes.
     Makes the system easier to extend and maintain.
 
-    Example:
+Example:
     
     // Without DIP: High-level module depends on low-level module
     class Keyboard {
@@ -246,5 +244,5 @@
     }
     }   
 
-    Use Case:
+Use Case:
     Dependency injection frameworks (e.g., Spring) are built on this principle.
