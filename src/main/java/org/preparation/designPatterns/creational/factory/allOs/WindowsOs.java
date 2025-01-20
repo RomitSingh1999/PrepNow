@@ -1,6 +1,6 @@
-package org.preparation.DesignPatterns.factory.allOs;
+package org.preparation.designPatterns.creational.factory.allOs;
 
-import org.preparation.DesignPatterns.factory.Os;
+import org.preparation.designPatterns.creational.factory.Os;
 
 public class WindowsOs implements Os {
     @Override

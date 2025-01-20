@@ -1,4 +1,4 @@
-package org.preparation.DesignPatterns.singelton;
+package org.preparation.designPatterns.creational.singelton;
 
 public class Animals {
     private Animals(){}
