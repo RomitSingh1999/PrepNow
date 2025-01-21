@@ -1,10 +1,18 @@
 package org.preparation.practice;
 
+import java.util.concurrent.Callable;
+
 public class PracticeProblems {
+
 
     public static void main(String args[])
     {
-        System.out.println("In the practice class!!");
+        Callable callable= new Callable() {
+            @Override
+            public Object call() throws Exception {
+                return null;
+            }
+        };
     }
 
 }
